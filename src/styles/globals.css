@@ -105,3 +105,22 @@ a {
     color-scheme: dark;
   }
 }
+main{
+  padding: 3rem;
+}
+ul{
+  margin: 2rem;
+}
+ul li{
+    margin: 0.5rem 1rem;
+}
+button{
+  background: black;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1rem;
+}
+input{
+  margin: 0 0.5rem 0 0;
+}
