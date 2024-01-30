@@ -13,13 +13,14 @@ const Questionnaire = () => {
     };
 
     const handleContinue = () => {
-        debugger
         const currentQuestionId = questionnaireData[currentQuestionIndex].id;
         if (answers[currentQuestionId]) {
+            // debugger
+
             const followUpQuestion = getFollowUpQuestion(currentQuestionId, answers[currentQuestionId]);
             if (followUpQuestion) {
                 setAnswers({ ...answers, [followUpQuestion.question.id]: null });
-                setCurrentQuestionIndex(questionnaireData.findIndex(q => q.id === followUpQuestion.question.id));
+                setCurrentQuestionIndex(followUpQuestion.question.id);
             } else {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
             }
@@ -34,7 +35,7 @@ const Questionnaire = () => {
     };
 
     const getFollowUpQuestion = (questionId, answer) => {
-        debugger
+        // debugger
         const question = questionnaireData.find(q => q.id === questionId);
 
         if (question.followUpQuestion) {

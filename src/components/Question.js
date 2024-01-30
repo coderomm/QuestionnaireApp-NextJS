@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Question = ({ data, onAnswer, answers }) => {
-  debugger
+  // debugger
   // Check if 'data' is defined before attempting to destructure
   if (!data) {
     // You can handle the case when 'data' is undefined, e.g., by rendering an error message
