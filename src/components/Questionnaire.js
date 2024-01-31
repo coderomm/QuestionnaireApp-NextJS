@@ -13,10 +13,9 @@ const Questionnaire = () => {
     };
 
     const handleContinue = () => {
+        debugger
         const currentQuestionId = questionnaireData[currentQuestionIndex].id;
         if (answers[currentQuestionId]) {
-            // debugger
-
             const followUpQuestion = getFollowUpQuestion(currentQuestionId, answers[currentQuestionId]);
             if (followUpQuestion) {
                 setAnswers({ ...answers, [followUpQuestion.question.id]: null });
@@ -35,9 +34,8 @@ const Questionnaire = () => {
     };
 
     const getFollowUpQuestion = (questionId, answer) => {
-        // debugger
+        debugger
         const question = questionnaireData.find(q => q.id === questionId);
-
         if (question.followUpQuestion) {
             if (Array.isArray(question.followUpQuestion)) {
                 // If followUpQuestion is an array, use .find
@@ -49,8 +47,7 @@ const Questionnaire = () => {
                 // If followUpQuestion is a single object, directly check the condition
                 const logicalCondition = question.followUpQuestion.condition.replace("answer", answer);
                 if (eval(logicalCondition)) {
-                    const fq = question.followUpQuestion;
-                    return fq;
+                    return question.followUpQuestion;
                 }
             }
         }
