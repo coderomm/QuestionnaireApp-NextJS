@@ -1,78 +1,64 @@
 [
     {
         "id": "1",
-        "text": "What is your favorite color?",
+        "text": "What’s Your age?",
         "type": "single_choice",
         "options": [
-            "Red",
-            "Blue",
-            "Green",
-            "Yellow"
+            "18-21",
+            "22-30",
+            "31-40",
+            "41-55",
+            "55-70",
+            "70+"
         ]
     },
     {
         "id": "2",
-        "text": "How many cups of coffee do you drink per day?",
-        "type": "range_input",
-        "min": 0,
-        "max": 10,
-        "followUpQuestion": {
-            "condition": "answer > 3",
-            "question": {
-                "id": "3",
-                "text": "Do you prefer tea instead?",
-                "type": "single_choice",
-                "options": [
-                    "Yes",
-                    "No"
-                ]
-            }
-        }
-    },
-    {
-        "id": "4",
-        "text": "Which programming languages do you use?",
-        "type": "multiple_choice",
+        "text": "What is your Gender?",
+        "type": "single_choice",
         "options": [
-            "JavaScript",
-            "Python",
-            "Java",
-            "C++",
-            "Ruby"
+            "Male",
+            "Female",
+            "Rather not say"
         ]
     },
     {
-        "id": "5",
-        "text": "What is your preferred coding environment?",
+        "id": "3",
+        "text": "What’s Your Profession:",
+        "type": "single_choice",
+        "options": [
+            "Own my own business",
+            "Service",
+            "Student",
+            "Athlete",
+            "Retired",
+            "Others"
+        ]
+    },
+    {
+        "id": 4,
+        "text": "What is your Weight: ___________",
         "type": "text_input"
     },
     {
-        "id": "6",
-        "text": "How many hours do you spend coding per week?",
-        "type": "range_input",
-        "min": 0,
-        "max": 40,
-        "followUpQuestions": [
-            {
-                "condition": "answer > 20",
-                "question": {
-                    "id": "7",
-                    "text": "What projects are you currently working on?",
-                    "type": "text_input"
-                }
-            },
-            {
-                "condition": "answer < 10",
-                "question": {
-                    "id": "8",
-                    "text": "Do you find coding challenging?",
-                    "type": "single_choice",
-                    "options": [
-                        "Yes",
-                        "No"
-                    ]
-                }
-            }
-        ]
+        "id": 5,
+        "text": "What is your Height: ___________",
+        "type": "text-input"
+    },
+    {
+        "id": 6,
+        "text": "Whom are you looking for supplements for?",
+        "options": [
+            "Myself",
+            "My Parents",
+            "Partner",
+            "My Child"
+        ],
+        "type": "single-choice"
+    },
+    {
+        "id": 7,
+        "question": "What is your City: ___________",
+        "type": "text-input"
     }
 ]
